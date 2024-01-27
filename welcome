@@ -7,14 +7,14 @@ pipeline {
                 echo 'cloning code from github'
             }
         }
-		step('Build'){
+		steps('Build'){
 			step{
 				echo 'build application'
 			}
 			
 		}
 		stage('test'){
-			step{
+			steps{
 				echo 'Test the Applucation'
 			
 			}
