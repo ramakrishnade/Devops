@@ -2,10 +2,22 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('check out SCM') {
             steps {
-                echo 'Hello World'
+                echo 'cloning code from github'
             }
         }
+		step('Build'){
+			step{
+				echo 'build application'
+			}
+			
+		}
+		stage('test'){
+			step{
+				echo 'Test the Applucation'
+			
+			}
+		}
     }
 }
